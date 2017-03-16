@@ -44,3 +44,9 @@ data$medium[na]<-"Other"
 anyNA(data)
 summary(data)
 
+############ Imputation using Hmisc package
+
+library(Hmisc)
+
+data$visits<-impute(data$visits,mean)
+
